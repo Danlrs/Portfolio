@@ -256,3 +256,30 @@
     transform: none;
   }
 }
+
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: 2.2rem;
+  }
+  
+  .hero-description {
+    font-size: 1rem;
+    margin-bottom: 2rem;
+  }
+  
+  .hero-cta {
+    flex-direction: column;
+    gap: 1rem;
+    width: 100%;
+  }
+  
+  .btn {
+    width: 100%;
+    justify-content: center;
+  }
+  
+  .hero-avatar {
+    width: 100px;
+    height: 100px;
+  }
+}

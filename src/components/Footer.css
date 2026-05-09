@@ -58,8 +58,17 @@
 }
 
 @media (max-width: 768px) {
+  .footer {
+    padding: 3rem 0 1.5rem;
+  }
+
   .footer-content {
     flex-direction: column;
     text-align: center;
+    gap: 1.5rem;
+  }
+  
+  .footer-brand p {
+    font-size: 0.95rem;
   }
 }

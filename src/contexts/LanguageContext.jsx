@@ -39,6 +39,7 @@ export const translations = {
     
     'hero.subtitle': '< Estudante de Engenharia de Computação />',
     'hero.title.prefix': 'Olá, eu sou',
+    'hero.title.name': 'Daniel Lucas',
     'hero.description': 'Focado em desenvolver softwares com soluções inovadoras e inteligentes, buscando a criação de arquiteturas escaláveis que geram impacto real e eficiente.',
     'hero.btn.projects': 'Ver Projetos',
     'hero.btn.github': 'GitHub',
@@ -89,6 +90,7 @@ export const translations = {
     
     'hero.subtitle': '< Computer Engineer Student />',
     'hero.title.prefix': "Hi, I'm",
+    'hero.title.name': 'Daniel Lucas',
     'hero.description': 'Focused on developing software with innovative and intelligent solutions, seeking the creation of scalable architectures that generate real and efficient impact.',
     'hero.btn.projects': 'View Projects',
     'hero.btn.github': 'GitHub',

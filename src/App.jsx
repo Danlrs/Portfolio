@@ -5,10 +5,12 @@ import Hero from './components/Hero';
 import About from './components/About';
 import Projects from './components/Projects';
 import Footer from './components/Footer';
+import { LanguageProvider } from './contexts/LanguageContext';
 
 function App() {
   return (
-    <div className="app-container">
+    <LanguageProvider>
+      <div className="app-container">
       <Navbar />
       <main>
         <Hero />
@@ -16,7 +18,8 @@ function App() {
         <Projects />
       </main>
       <Footer />
-    </div>
+      </div>
+    </LanguageProvider>
   );
 }
 

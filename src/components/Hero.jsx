@@ -1,9 +1,12 @@
 import React from 'react';
 import { ArrowRight } from 'lucide-react';
+import { useLanguage } from '../contexts/LanguageContext';
 import './Hero.css';
 import profileImg from '../assets/profile.jpg';
 
 const Hero = () => {
+  const { t } = useLanguage();
+
   return (
     <section id="home" className="hero">
       <div className="container hero-container">
@@ -12,22 +15,22 @@ const Hero = () => {
             <div className="hero-avatar">
               <img src={profileImg} alt="Daniel Lucas" />
             </div>
-            <h2 className="hero-subtitle">&lt; Computer Engineer Student /&gt;</h2>
+            <h2 className="hero-subtitle">{t('hero.subtitle')}</h2>
           </div>
           <h1 className="hero-title delay-200">
-            Hi, I'm <br />
-            <span className="text-gradient">Daniel Lucas.</span>
+            {t('hero.title.prefix')} <br />
+            <span className="text-gradient">{t('hero.title.name')}</span>
           </h1>
           <p className="hero-description delay-300">
-            Focused on developing software with innovative and intelligent solutions, seeking the creation of scalable architectures that generate real and efficient impact.
+            {t('hero.description')}
           </p>
 
           <div className="hero-cta delay-300">
             <a href="#projects" className="btn btn-primary">
-              View Projects <ArrowRight size={18} />
+              {t('hero.btn.projects')} <ArrowRight size={18} />
             </a>
             <a href="https://github.com/Danlrs" target="_blank" rel="noopener noreferrer" className="btn btn-secondary">
-              GitHub <ArrowRight size={18} />
+              {t('hero.btn.github')} <ArrowRight size={18} />
             </a>
           </div>
         </div>
@@ -48,7 +51,7 @@ const Hero = () => {
                   <span className="code-keyword">const</span> <span className="code-variable">developer</span> <span className="code-operator">=</span> {'{'}
                   <br />  <span className="code-property">name</span>: <span className="code-string">'Daniel Lucas'</span>,
                   <br />  <span className="code-property">role</span>: <span className="code-string">'Software Engineer'</span>,
-                  <br />  <span className="code-property">skills</span>: [<span className="code-string">'Angular'</span>, <span className="code-string">'NestJS'</span>, <span className="code-string">'Python'</span>],
+                  <br />  <span className="code-property">skills</span>: [<span className="code-string">'React'</span>, <span className="code-string">'Node.js'</span>, <span className="code-string">'Python'</span>],
                   <br />  <span className="code-property">passion</span>: <span className="code-string">'Building scalable systems'</span>
                   <br />{'}'};
                   <br />

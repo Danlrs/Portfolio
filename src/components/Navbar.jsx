@@ -1,9 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
 import { FaGithub, FaLinkedin } from 'react-icons/fa';
+import { useLanguage } from '../contexts/LanguageContext';
+import LanguageToggle from './LanguageToggle';
 import './Navbar.css';
 
 const Navbar = () => {
+  const { language, toggleLanguage, t } = useLanguage();
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
@@ -25,9 +28,13 @@ const Navbar = () => {
         </a>
 
         <nav className={`nav-links ${mobileMenuOpen ? 'open' : ''}`}>
-          <a href="#home" onClick={() => setMobileMenuOpen(false)}>Home</a>
-          <a href="#about" onClick={() => setMobileMenuOpen(false)}>About</a>
-          <a href="#projects" onClick={() => setMobileMenuOpen(false)}>Projects</a>
+          <a href="#home" onClick={() => setMobileMenuOpen(false)}>{t('nav.home')}</a>
+          <a href="#about" onClick={() => setMobileMenuOpen(false)}>{t('nav.about')}</a>
+          <a href="#projects" onClick={() => setMobileMenuOpen(false)}>{t('nav.projects')}</a>
+
+          <div className="nav-controls" style={{ display: 'flex', alignItems: 'center' }}>
+            <LanguageToggle />
+          </div>
 
           <div className="nav-socials">
             <a href="https://github.com/Danlrs" target="_blank" rel="noopener noreferrer">
